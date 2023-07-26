@@ -90,7 +90,7 @@ footer {
 /* モバイル向けのスタイル */
 @media screen and (max-width: 768px) {
     .logo {
-        width: 100px;
+        width: 300px;
     }
 
     nav {
@@ -110,3 +110,7 @@ footer {
         clip-path: none; /* クリッピングマスクを削除 */
     }
 }
+@media (orientation: portrait) {
+    #titleImage {
+      width: 200px;
+    }

@@ -26,7 +26,7 @@ body {
   position: fixed;
   top: 10px;
   left: 10px;
-  width: 300px;
+  width: 250px;
   height: auto;
   z-index: 2;
 }
@@ -149,9 +149,9 @@ body {
   }
 }
 /* メディアクエリ */
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   #titleImage {
-    width: 200px; /* モバイル表示では幅を150pxにする */
+    width: 150px; /* モバイル表示では幅を150pxにする */
   }
 }
 /* メディアクエリ */
@@ -164,5 +164,11 @@ body {
 @media (orientation: landscape) {
   #socialIcons {
     top: 70%; /* 横長表示では上から60%の位置に */
+  }
+}
+
+@media (orientation: landscape) {
+  #socialIcons img {
+    width: 30px; /* 横長表示では幅を20pxにする */
   }
 }

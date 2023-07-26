@@ -26,7 +26,7 @@ body {
   position: fixed;
   top: 10px;
   left: 10px;
-  width: 250px;
+  width: 240px;
   height: auto;
   z-index: 2;
 }
@@ -151,7 +151,7 @@ body {
 /* メディアクエリ */
 @media (max-width: 750px) {
   #titleImage {
-    width: 150px; /* モバイル表示では幅を150pxにする */
+    width: 50px; /* モバイル表示では幅を150pxにする */
   }
 }
 /* メディアクエリ */
@@ -169,6 +169,6 @@ body {
 
 @media (orientation: landscape) {
   #socialIcons img {
-    width: 30px; /* 横長表示では幅を20pxにする */
+    width: 10px; /* 横長表示では幅を10pxにする */
   }
 }

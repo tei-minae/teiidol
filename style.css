@@ -115,17 +115,3 @@ footer {
     #titleImage {
       width: 200px;
     }
-}
-/* モバイル向けのスタイル */
-@media (orientation: portrait) {
-    #socialIcons {
-      top: 30%;
-    }
-  }
-  
-  @media (orientation: landscape) {
-    #socialIcons {
-      top: 70%;
-    }
-  }
-  

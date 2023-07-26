@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minae's Homepage</title>
+    <style>
+        @font-face {
+            font-family: 'Nicomoji Plus';
+            src: url('font/nicomoji-plus_v2.ttf');
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            font-size: 20px; /* すべての文字のサイズを大きくする */
+        }
+
+        body, html {
+            height: 100%;
+        }
+
+        .video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -100;
+        }
+
+        .image-container {
+            position: absolute;
+            top: 50%;
+            left: 30%; /* 画面中央から左に20%移動 */
+            transform: translate(-50%, -50%);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 2fr 4fr; /* 1列目は2倍、2列目は4倍の幅 */
+            grid-template-rows: 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 2.4fr; /* 各行の高さを1.2倍に調整 */
+            gap: 2px;
+            position: absolute;
+            top: 50%;
+            right: 30%;
+            transform: translate(50%, -50%);
+            border: 2px solid cyan;
+            width: 20%;
+            height: 50%;
+            color: white; /* 文字色を白に */
+            font-family: 'Nicomoji Plus'; /* フォントを変更 */
+            background-color: rgba(0, 0, 0, 0.5); /* 黒の半透明の背景 */
+        }
+
+        .grid div {
+            border: 1px solid cyan;
+            padding: 10px;
+            display: flex; /* 文字を中央揃えにするための設定 */
+            align-items: center; /* 縦方向中央揃え */
+            justify-content: center; /* 横方向中央揃え */
+            flex-direction: column; /* 子要素を垂直方向に配置 */
+        }
+
+        .grid .first-row {
+            grid-column-start: 1;
+            grid-column-end: 3; /* 1行目を結合 */
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="background-video" class="video-background">
+        <source src="movie/profile2.mp4" type="video/mp4">
+    </video>
+    <div class="image-container">
+        <img src="profileimg/profile_tei2.png">
+    </div>
+    <div class="grid">
+        <!-- ここに表の各セルを作成 -->
+        <div class="first-row">
+            <span>みなえ てい</span>
+            <span>MINAE TEI</span>
+        </div>
+        <div>ニックネーム</div> <div>みなてぃ</div>
+        <div>好きなもの</div> <div>犬</div>
+        <div>嫌いなもの</div> <div>蜘蛛</div>
+        <div>得意なこと</div> <div>カラオケ</div>
+        <div>URL</div> <div>linktr.ee/tei.minae</div>
+        <div>自己PR</div> <div>お歌を歌うのが好きです。全世界の人にお歌を届け、幸せになってもらうのが夢です。アイドルになりたい人募集しています。犬が好き。</div>
+    </div>
+    <!-- ここに他のページの内容を記述 -->
+</body>
+</html>

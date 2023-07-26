@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "Nicomoji Plus";
+    src: url("/font/nicomoji-plus_v2.ttf") format("truetype");
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "Nicomoji Plus", sans-serif;
+}
+
+#bg-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+/* 既存のスタイルがここに入る部分 */
+
+/* 画像コンテナの初期スタイル */
+.image-container {
+    opacity: 0;
+}
+
+/* 画像コンテナのフェードインアニメーション */
+.image-container.fade-in {
+    opacity: 1;
+    transition: opacity 1.4s ease;
+}

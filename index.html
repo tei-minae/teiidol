@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ホームページ</title>
+  <style>
+    body {
+      background-color: black;
+      margin: 0;
+      padding: 0;
+    }
+
+    #introVideo {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <video id="introVideo" controls autoplay muted>
+    <source src="movie/firstmovie.mp4" type="video/mp4">
+    <source src="movie/firstmovie.webm" type="video/webm">
+    Your browser does not support the video tag.
+  </video>
+
+  <script>
+    // introVideo要素を取得
+    const introVideo = document.getElementById('introVideo');
+
+    // ビデオ再生が終了したらホームページに遷移する
+    introVideo.addEventListener('ended', function() {
+      // ホームページに遷移
+      window.location.href = 'home.html';
+    });
+  </script>
+</body>
+</html>

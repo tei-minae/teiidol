@@ -114,14 +114,3 @@ footer {
     #titleImage {
       width: 200px;
     }
-    @media (orientation: portrait) {
-        #socialIcons {
-          top: 30%;  /* adjust this value as needed */
-        }
-      }
-    
-      @media (orientation: landscape) {
-        #socialIcons {
-          top: 70%;  /* adjust this value as needed */
-        }
-      }

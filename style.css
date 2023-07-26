@@ -35,7 +35,7 @@ header {
 }
 
 .logo {
-    width: 300px;
+    width: 100px;
     position: relative;
     z-index: 3;
 }
@@ -90,7 +90,7 @@ footer {
 /* モバイル向けのスタイル */
 @media screen and (max-width: 768px) {
     .logo {
-        width: 150px;
+        width: 100px;
     }
 
     nav {

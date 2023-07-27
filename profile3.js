@@ -1,3 +1,6 @@
+
+document.addEventListener('DOMContentLoaded', function() {
+
 function fadeInOnScroll() {
     const containers = document.querySelectorAll('.image-container');
 
@@ -23,4 +26,6 @@ window.addEventListener('load', fadeInOnScroll);
 fadeInOnScroll();
 document.getElementById('profile-image').addEventListener('click', function() {
     window.location.href = "minae.html";
+});
+
 });

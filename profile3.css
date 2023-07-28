@@ -1,0 +1,288 @@
+@font-face {
+            font-family: "Nicomoji Plus";
+            src: url("/font/nicomoji-plus_v2.ttf") format("truetype");
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: "Nicomoji Plus", sans-serif;
+        }
+
+        #bg-video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            transform: translate(-50%, -50%);
+        }
+
+        .container {
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+        }
+
+        .image-container {
+            position: relative;
+            width: 350px;
+            height: 440px; 
+            border-radius: 0;
+            transition: border-radius 3s ease, transform 1s ease;
+            overflow: hidden;
+            transform: translateX(-200%);
+        }
+
+        .image-container:hover {
+            border-radius: 20% 0 20% 0;
+        }
+
+        .image-effect {
+            position: absolute;
+            width: 100%;
+            height: 100%; 
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .image-container:hover .image-effect {
+            transform: scale(1.05);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 255, 0.05);
+            transition: background-color 0.7s ease;
+            opacity: 0;
+        }
+
+        .image-container:hover .overlay {
+            opacity: 1;
+            background-color: rgba(0, 0, 255, 0.17);
+        }
+
+        .new-image-container1 {
+            position: absolute;
+            left: 420px;
+            top: 0;
+        }
+
+        .new-image-container2 {
+            position: absolute;
+            left: 840px;
+            top: 0;
+        }
+
+        .new-image-container3 {
+            position: absolute;
+            left: 1260px;
+            top: 0;
+        }
+
+        .new-image-container4 {
+            position: absolute;
+            left: 0px;
+            top: 690px; 
+        }
+
+        .new-image-container5 {
+            position: absolute;
+            left: 420px;
+            top: 690px; 
+        }
+
+        /* Additional members */
+        .new-image-container6 {
+            position: absolute;
+            left: 840px;
+            top: 690px; 
+        }
+
+        .new-image-container7 {
+            position: absolute;
+            left: 1260px;
+            top: 690px; 
+        }
+
+        .new-image-container8 {
+            position: absolute;
+            left: 0px;
+            top: 1380px;
+        }
+
+        .new-image-container9 {
+            position: absolute;
+            left: 420px;
+            top: 1380px; 
+        }
+
+        .new-image-container10 {
+            position: absolute;
+            left: 840px;
+            top: 1380px; 
+        }
+
+        .new-image-container11 {
+            position: absolute;
+            left: 1260px;
+            top: 1380px; 
+        }
+
+        /* More additional members */
+        .new-image-container12 {
+            position: absolute;
+            left: 0px;
+            top: 2070px; 
+        }
+
+        .new-image-container13 {
+            position: absolute;
+            left: 420px;
+            top: 2070px; 
+        }
+
+        .new-image-container14 {
+            position: absolute;
+            left: 840px;
+            top: 2070px; 
+        }
+
+        .new-image-container15 {
+            position: absolute;
+            left: 1260px;
+            top: 2070px; 
+        }
+
+        /* More additional members */
+        .new-image-container16 {
+            position: absolute;
+            left: 0px;
+            top: 2760px; 
+        }
+
+        .new-image-container17 {
+            position: absolute;
+            left: 420px;
+            top: 2760px; 
+        }
+
+        .new-image-container18 {
+            position: absolute;
+            left: 840px;
+            top: 2760px; 
+        }
+
+        .new-image-container19 {
+            position: absolute;
+            left: 1260px;
+            top: 2760px; 
+        }
+
+        .new-image-container20 {
+            position: absolute;
+            left: 0px;
+            top: 3450px; 
+        }
+
+        .new-image-container21 {
+            position: absolute;
+            left: 420px;
+            top: 3450px; 
+        }
+
+        .new-image-container22 {
+            position: absolute;
+            left: 820px;
+            top: 3450px; 
+        }
+
+        .new-image-container23 {
+            position: absolute;
+            left: 1260px;
+            top: 3450px; 
+        }
+
+        .profile-text {
+            position: absolute;
+            top: -150px;
+            left: -700px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .text-container {
+            position: absolute;
+            width: 100%;
+            bottom: 0px; 
+            text-align: center;
+            color: white;
+            font-size: 27px;
+            line-height: 1.3;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .text-container .text-jp {
+            font-weight: bold;
+        }
+
+        .text-container .text-en {
+            font-weight: normal;
+        }
+    
+@font-face {
+    font-family: "Nicomoji Plus";
+    src: url("/font/nicomoji-plus_v2.ttf") format("truetype");
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "Nicomoji Plus", sans-serif;
+}
+
+#bg-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+/* 既存のスタイルがここに入る部分 */
+
+/* 画像コンテナの初期スタイル */
+.image-container {
+    opacity: 0;
+}
+
+/* 画像コンテナのフェードインアニメーション */
+.image-container.fade-in {
+    opacity: 1;
+    transition: opacity 1.4s ease;
+}

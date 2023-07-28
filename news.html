@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>アイドルプロジェクトVお問い合わせフォーム</title>
+    <link rel="stylesheet" type="text/css" href="news.css">
+</head>
+<body>
+    <div class="container">
+        <h1>アイドルプロジェクトVお問い合わせフォーム</h1>
+        <form id="contact-form" action="https://formspree.io/f/mqkvekwb" method="post">
+            <label for="name">お名前:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">メールアドレス:</label><br>
+            <input type="text" id="email" name="email"><br>
+            <label for="inquiry">お問い合わせのジャンル:</label><br>
+            <select id="inquiry" name="inquiry">
+                <option value="collaboration">コラボ依頼</option>
+                <option value="interview">取材</option>
+                <option value="activity">活動内容について</option>
+                <option value="application">グループへの応募</option>
+                <option value="other">その他</option>
+            </select><br>
+            <label for="message">メッセージ:</label><br>
+            <textarea id="message" name="message"></textarea><br>
+            <input type="submit" value="送信">
+        </form>
+    </div>
+</body>
+</html>

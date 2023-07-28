@@ -1,9 +1,11 @@
-<!DOCTYPE html>
+html
+
+
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>ABOUT</title>
-  <style>
+<meta charset="utf-8"/>
+<title>ABOUT</title>
+<style>
     body {
       margin: 0;
       padding: 0;
@@ -28,134 +30,6 @@
       z-index: 1;
     }
 
-    #titleImage {
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      width: 300px;
-      height: auto;
-      z-index: 2;
-    }
-
-    #navigationMenu {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      z-index: 3;
-    }
-
-    #navigationMenu ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    #navigationMenu li {
-      margin-bottom: 10px;
-      position: relative;
-    }
-
-    #navigationMenu li a {
-      display: block;
-      position: absolute;
-      top: 43%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 4;
-      color: white;
-      font-size: 16px;
-      text-decoration: none;
-      transition: text-shadow 0.3s ease;
-    }
-
-    #navigationMenu li a:hover {
-      text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
-    }
-
-    #navigationMenu li img {
-      position: relative;
-      z-index: 3;
-      width: 200px;
-      height: auto;
-    }
-
-    #newsTicker {
-      position: fixed;
-      top: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 4;
-      width: 70%;
-      height: 60px;
-      overflow: hidden;
-      border: 2px solid #00ff00;
-      border-radius: 10px;
-      background-color: #000000;
-      box-shadow: 0 0 10px #00ff00;
-    }
-
-    #newsTicker .tickerText {
-      position: relative;
-      top: 18%;
-      white-space: nowrap;
-      animation: tickerAnimation 20s linear infinite;
-      text-align: center;
-    }
-
-    #newsTicker .tickerText span {
-      padding: 5px;
-      display: inline-block;
-      color: white;
-      font-size: 18px;
-    }
-
-    @keyframes tickerAnimation {
-      0% {
-        transform: translateX(100%);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
-    }
-
-    #socialIcons {
-      position: fixed;
-      top: 50%;
-      left: 100px;
-      transform: translateY(-50%);
-      z-index: 7;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    #socialIcons img {
-      width: 40px;
-      height: auto;
-      margin-bottom: 50px;
-      margin-right: 5px;
-    }
-
-    /* アイコンに青の電流がバチバチ流れるアニメーション */
-    #socialIcons img:hover {
-      animation: electricFlow 0.8s linear infinite;
-    }
-
-    @keyframes electricFlow {
-      0% {
-        opacity: 1;
-        transform: translateX(0);
-      }
-      50% {
-        opacity: 0.5;
-        transform: translateX(10px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
     #content {
       position: fixed;
       top: 50%;
@@ -170,62 +44,29 @@
   </style>
 </head>
 <body>
-  <div id="background"></div>
-  <video id="topVideo" autoplay loop muted>
-    <source src="aboutmovie/ABOUT.mp4" type="video/mp4">
-    <source src="aboutmovie/ABOUT.webm" type="video/webm">
+<div id="background"></div>
+<video autoplay="" id="topVideo" loop="" muted="">
+<source src="aboutmovie/ABOUT.mp4" type="video/mp4"/>
+<source src="aboutmovie/ABOUT.webm" type="video/webm"/>
     Your browser does not support the video tag.
   </video>
-  <img id="titleImage" src="Homeimg/PROJECTV.png" alt="タイトル画像">
-  <div id="navigationMenu">
-    <ul>
-      <li>
-        <img src="Homeimg/navigationmenu.png" alt="ナビゲーションメニュー枠">
-        <a href="home.html">HOME</a>
-      </li>
-      <li>
-        <img src="Homeimg/navigationmenu.png" alt="ナビゲーションメニュー枠">
-        <a href="about.html">ABOUT</a>
-      </li>
-      <li>
-        <img src="Homeimg/navigationmenu.png" alt="ナビゲーションメニュー枠">
-        <a href="#">PROFILE</a>
-      </li>
-      <li>
-        <img src="Homeimg/navigationmenu.png" alt="ナビゲーションメニュー枠">
-        <a href="#">NEWS</a>
-      </li>
-      <li>
-        <img src="Homeimg/navigationmenu.png" alt="ナビゲーションメニュー枠">
-        <a href="#">JOIN US</a>
-      </li>
-    </ul>
-  </div>
-  <div id="newsTicker">
-    <div class="tickerText">
-      <span>現在メンバー募集中。詳しくは「Join us」のページを確認してね！</span>
-    </div>
-  </div>
-  <div id="socialIcons">
-    <img src="Homeimg/Twitter.png" alt="Twitter">
-    <img src="Homeimg/YouTube.png" alt="YouTube">
-    <img src="Homeimg/instagram.png" alt="Instagram">
-    <img src="Homeimg/Threads.png" alt="Threads">
-  </div>
-  <div id="content">
-    <p>アイドルの夢を諦めたくないあなたへ――。</p>
-    <p>私たちは、アイドルの輝きに憧れてその夢をかなえたいと思っているグループです。</p>
-    <p>でも現実はそう簡単にはいきませんよね。年齢や性別や容姿や時間やお金など、</p>
-    <p>さまざまな壁が立ちはだかります。そんな夢を持ち続けているあなたへ。</p>
-    <p>今、テクノロジーの進歩によって、バーチャル世界でアイドル活動をすることが</p>
-    <p>可能になりました。この世界では、あらゆる制約から解放され、自分の理想の</p>
-    <p>姿でアイドルになれます。この世界では、VRやYouTubeやSNSなどの</p>
-    <p>プラットフォームを使って、自分の個性や才能や魅力を存分に発揮できます。</p>
-    <p>ぜひ、あなたも私たちと一緒にバーチャルアイドルとして新しい世界に</p>
-    <p>挑戦してみませんか？私たちは日本のアイドルシーンに革命を起こし、</p>
-    <p>世界中の人々に感動と笑顔と元気を届けることを目指しています。</p>
-    <p>その夢は、あなたと私たちが力を合わせて叶えるものです。</p>
-    <p>あなたの参加を心から歓迎します。</p>
-  </div>
+
+
+<div id="content">
+<p>アイドルの夢を諦めたくないあなたへ――。</p>
+<p>私たちは、アイドルの輝きに憧れてその夢をかなえたいと思っているグループです。</p>
+<p>でも現実はそう簡単にはいきませんよね。年齢や性別や容姿や時間やお金など、</p>
+<p>さまざまな壁が立ちはだかります。そんな夢を持ち続けているあなたへ。</p>
+<p>今、テクノロジーの進歩によって、バーチャル世界でアイドル活動をすることが</p>
+<p>可能になりました。この世界では、あらゆる制約から解放され、自分の理想の</p>
+<p>姿でアイドルになれます。この世界では、VRやYouTubeやSNSなどの</p>
+<p>プラットフォームを使って、自分の個性や才能や魅力を存分に発揮できます。</p>
+<p>ぜひ、あなたも私たちと一緒にバーチャルアイドルとして新しい世界に</p>
+<p>挑戦してみませんか？私たちは日本のアイドルシーンに革命を起こし、</p>
+<p>世界中の人々に感動と笑顔と元気を届けることを目指しています。</p>
+<p>その夢は、あなたと私たちが力を合わせて叶えるものです。</p>
+<p>あなたの参加を心から歓迎します。</p>
+</div>
 </body>
 </html>
+

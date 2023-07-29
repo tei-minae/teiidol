@@ -288,3 +288,15 @@ body {
     opacity: 1;
     transition: opacity 1.4s ease;
 }
+
+@media screen and (max-width: 768px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container {
+        width: 80%;
+        height: 80%;
+    }
+}

@@ -248,7 +248,17 @@ body {
     height: 100vh;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+}
+
 .container {
+    margin-top: 120vh;
+    padding-left: 70em;
     margin-top: 200vh;
     padding-left: 60em;
     display: grid;
@@ -266,7 +276,17 @@ body {
     height: 100vh;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+}
+
 .container {
+    margin-top: 120vh;
+    padding-left: 70em;
     margin-top: 200vh;
     padding-left: 130em;
         grid-template-columns: repeat(3, 1fr);
@@ -274,9 +294,30 @@ body {
 }
 
 @media (max-width: 1200px) {
-    .container {
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+}
+
+.container {
+    margin-top: 120vh;
+    padding-left: 70em;
         grid-template-columns: repeat(3, 1fr);
         margin-top: 200vh;  # Adjusted margin-top for mobile view
         padding-left: 130em;  # Adjusted padding-left for mobile view
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 120vh;  # Adjusted margin-top for mobile view
+        padding-left: 0;  # Adjusted padding-left for mobile view
+    }
+    .new-image-container {
+        width: 100%;  # Adjusted width for mobile view
     }
 }

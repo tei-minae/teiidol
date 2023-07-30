@@ -27,8 +27,8 @@
 
         .image-container {
             position: relative;
-            width: 350px;
-            height: 440px; 
+            width: 250px;
+            height: 340px; 
             border-radius: 0;
             transition: border-radius 3s ease, transform 1s ease;
             overflow: hidden;
@@ -249,8 +249,8 @@ body {
 }
 
 .container {
-    margin-top: 120vh;
-    padding-left: 70em;
+    margin-top: 200vh;
+    padding-left: 60em;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: minmax(100px, auto);

@@ -12,7 +12,6 @@
         }
 
         #bg-video {
-    object-fit: cover;
             position: fixed;
             top: 50%;
             left: 50%;
@@ -24,11 +23,7 @@
             transform: translate(-50%, -50%);
         }
 
-        .container {
-            position: relative;
-            display: inline-block;
-            z-index: 1;
-        }
+        
 
         .image-container {
             position: relative;
@@ -73,144 +68,75 @@
         }
 
         .new-image-container1 {
-            position: absolute;
-            left: 420px;
-            top: 0;
         }
 
         .new-image-container2 {
-            position: absolute;
-            left: 840px;
-            top: 0;
         }
 
         .new-image-container3 {
-            position: absolute;
-            left: 1260px;
-            top: 0;
         }
 
         .new-image-container4 {
-            position: absolute;
-            left: 0px;
-            top: 690px; 
         }
 
         .new-image-container5 {
-            position: absolute;
-            left: 420px;
-            top: 690px; 
         }
 
         /* Additional members */
         .new-image-container6 {
-            position: absolute;
-            left: 840px;
-            top: 690px; 
         }
 
         .new-image-container7 {
-            position: absolute;
-            left: 1260px;
-            top: 690px; 
         }
 
         .new-image-container8 {
-            position: absolute;
-            left: 0px;
-            top: 1380px;
         }
 
         .new-image-container9 {
-            position: absolute;
-            left: 420px;
-            top: 1380px; 
         }
 
         .new-image-container10 {
-            position: absolute;
-            left: 840px;
-            top: 1380px; 
         }
 
         .new-image-container11 {
-            position: absolute;
-            left: 1260px;
-            top: 1380px; 
         }
 
         /* More additional members */
         .new-image-container12 {
-            position: absolute;
-            left: 0px;
-            top: 2070px; 
         }
 
         .new-image-container13 {
-            position: absolute;
-            left: 420px;
-            top: 2070px; 
         }
 
         .new-image-container14 {
-            position: absolute;
-            left: 840px;
-            top: 2070px; 
         }
 
         .new-image-container15 {
-            position: absolute;
-            left: 1260px;
-            top: 2070px; 
         }
 
         /* More additional members */
         .new-image-container16 {
-            position: absolute;
-            left: 0px;
-            top: 2760px; 
         }
 
         .new-image-container17 {
-            position: absolute;
-            left: 420px;
-            top: 2760px; 
         }
 
         .new-image-container18 {
-            position: absolute;
-            left: 840px;
-            top: 2760px; 
         }
 
         .new-image-container19 {
-            position: absolute;
-            left: 1260px;
-            top: 2760px; 
         }
 
         .new-image-container20 {
-            position: absolute;
-            left: 0px;
-            top: 3450px; 
         }
 
         .new-image-container21 {
-            position: absolute;
-            left: 420px;
-            top: 3450px; 
         }
 
         .new-image-container22 {
-            position: absolute;
-            left: 820px;
-            top: 3450px; 
         }
 
         .new-image-container23 {
-            position: absolute;
-            left: 1260px;
-            top: 3450px; 
         }
 
         .profile-text {
@@ -258,7 +184,6 @@ body {
 }
 
 #bg-video {
-    object-fit: cover;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -270,11 +195,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.container {
-    position: relative;
-    display: inline-block;
-    z-index: 1;
-}
+
 
 /* 既存のスタイルがここに入る部分 */
 
@@ -289,14 +210,73 @@ body {
     transition: opacity 1.4s ease;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 1200px) {
+    
+}
+
+
+
+@media (max-width: 1200px) {
+    
+}
+
+
+
+@media (max-width: 1200px) {
+    
+}
+
+
+
+@media (max-width: 1200px) {
+    
+}
+
+body, html {
+    height: 100%;  # This line sets the height of the page to 100%
+    margin: 0;  # This line removes the default margin
+    display: flex;  # This line sets the display to flex for center alignment
+    align-items: center;  # This line centers the content vertically
+    justify-content: center;  # This line centers the content horizontally
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+}
+
+.container {
+    margin-top: 120vh;
+    padding-left: 70em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 10px;
+}
+
+@media (max-width: 1200px) {
     body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+}
+
+.container {
+    margin-top: 200vh;
+    padding-left: 130em;
+        grid-template-columns: repeat(3, 1fr);
     }
+}
+
+@media (max-width: 1200px) {
     .container {
-        width: 80%;
-        height: 80%;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 200vh;  # Adjusted margin-top for mobile view
+        padding-left: 130em;  # Adjusted padding-left for mobile view
     }
 }

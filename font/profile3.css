@@ -1,0 +1,277 @@
+@font-face {
+            font-family: "ニコモジ＋v2";
+            src: url("font/nicomoji-plus_v2.ttf") format("truetype");
+        }
+        body {
+    overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: "ニコモジ＋v2", sans-serif;
+        }
+
+        #bg-video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            transform: translate(-50%, -50%);
+        }
+
+        
+
+        .image-container {
+            position: relative;
+            width: 250px;
+            height: 340px; 
+            border-radius: 0;
+            transition: border-radius 3s ease, transform 1s ease;
+            overflow: hidden;
+            transform: translateX(-200%);
+        }
+
+        .image-container:hover {
+            border-radius: 20% 0 20% 0;
+        }
+
+        .image-effect {
+            position: absolute;
+            width: 100%;
+            height: 100%; 
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .image-container:hover .image-effect {
+            transform: scale(1.05);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 255, 0.05);
+            transition: background-color 0.7s ease;
+            opacity: 0;
+        }
+
+        .image-container:hover .overlay {
+            opacity: 1;
+            background-color: rgba(0, 0, 255, 0.17);
+        }
+
+        .new-image-container1 {
+        }
+
+        .new-image-container2 {
+        }
+
+        .new-image-container3 {
+        }
+
+        .new-image-container4 {
+        }
+
+        .new-image-container5 {
+        }
+
+        /* Additional members */
+        .new-image-container6 {
+        }
+
+        .new-image-container7 {
+        }
+
+        .new-image-container8 {
+        }
+
+        .new-image-container9 {
+        }
+
+        .new-image-container10 {
+        }
+
+        .new-image-container11 {
+        }
+
+        /* More additional members */
+        .new-image-container12 {
+        }
+
+        .new-image-container13 {
+        }
+
+        .new-image-container14 {
+        }
+
+        .new-image-container15 {
+        }
+
+        /* More additional members */
+        .new-image-container16 {
+        }
+
+        .new-image-container17 {
+        }
+
+        .new-image-container18 {
+        }
+
+        .new-image-container19 {
+        }
+
+        .new-image-container20 {
+        }
+
+        .new-image-container21 {
+        }
+
+        .new-image-container22 {
+        }
+
+        .new-image-container23 {
+        }
+
+        .profile-text {
+            position: absolute;
+            top: -150px;
+            left: -700px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .text-container {
+            position: absolute;
+            width: 100%;
+            bottom: 0px; 
+            text-align: center;
+            color: white;
+            font-size: 27px;
+            line-height: 1.3;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .text-container .text-jp {
+            font-weight: bold;
+        }
+
+        .text-container .text-en {
+            font-weight: normal;
+        }
+    
+@font-face {
+    font-family: "ニコモジ＋v2";
+    src: url("font/nicomoji-plus_v2.ttf") format("truetype");
+}
+body {
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "ニコモジ＋v2", sans-serif;
+}
+
+#bg-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translate(-50%, -50%);
+}
+
+
+
+/* 既存のスタイルがここに入る部分 */
+
+/* 画像コンテナの初期スタイル */
+.image-container {
+    opacity: 0;
+}
+
+/* 画像コンテナのフェードインアニメーション */
+.image-container.fade-in {
+    opacity: 1;
+    transition: opacity 1.4s ease;
+}
+
+
+body, html {
+    height: 100%;  # This line sets the height of the page to 100%
+    margin: 0;  # This line removes the default margin
+    display: flex;  # This line sets the display to flex for center alignment
+    align-items: center;  # This line centers the content vertically
+    justify-content: center;  # This line centers the content horizontally
+}
+
+body {
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+}
+
+body {
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+}
+
+.container {
+    margin-top: 120vh;
+    padding-left: 70em;
+    margin-top: 200vh;
+    padding-left: 60em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 10px;
+}
+
+@media (max-width: 1200px) {
+    body {
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+}
+}
+
+@media (max-width: 1200px) {
+.container {
+    margin-top: 120vh;
+    padding-left: 100em;
+        grid-template-columns: repeat(3, 1fr);
+        
+    }
+}
+
+@media (max-width: 1200px) {
+    .new-image-container {
+        width: 100%;  # Adjusted width for mobile view
+    }
+}

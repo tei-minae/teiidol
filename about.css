@@ -1,0 +1,171 @@
+@font-face {
+    font-family: "ニコモジ＋v2";
+    src: url("font/nicomoji-plus_v2.ttf") format("truetype");
+}
+body {
+    overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: "ニコモジ＋v2", sans-serif;
+        }
+#titleImage {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 270px;
+    height: auto;
+    z-index: 2;
+  }
+  
+  #navigationMenu {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 3;
+  }
+  
+  #navigationMenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #navigationMenu li {
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  #navigationMenu li a {
+    display: block;
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    transition: text-shadow 0.3s ease;
+  }
+  
+  #navigationMenu li a:hover {
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+  }
+  
+  #navigationMenu li img {
+    position: relative;
+    z-index: 3;
+    width: 200px;
+    height: auto;
+  }
+  
+  #newsTicker {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    width: 50%;
+    height: 60px;
+    overflow: hidden;
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    background-color: #000000;
+    box-shadow: 0 0 10px #00ff00;
+  }
+  
+  #newsTicker .tickerText {
+    position: relative;
+    top: 18%;
+    white-space: nowrap;
+    animation: tickerAnimation 20s linear infinite;
+    text-align: center;
+  }
+  
+  #newsTicker .tickerText span {
+    padding: 5px;
+    display: inline-block;
+    color: white;
+    font-size: 18px;
+  }
+  
+  @keyframes tickerAnimation {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  #socialIcons {
+    position: fixed;
+    top: 50%;
+    left: 100px;
+    transform: translateY(-50%);
+    z-index: 7;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  #socialIcons img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 50px;
+    margin-right: 5px;
+  }
+  
+  #socialIcons img:hover {
+    animation: electricFlow 0.8s linear infinite;
+  }
+  
+  @keyframes electricFlow {
+    0% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateX(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  /* メディアクエリ */
+  @media (max-width: 980px) {
+    #titleImage {
+      width: 150px; /* モバイル表示では幅を150pxにする */
+    }
+  }
+  /* メディアクエリ */
+  @media (orientation: portrait) {
+    #socialIcons {
+      top: 30%; /* 縦長表示では上から40%の位置に */
+    }
+  }
+  
+  @media (orientation: landscape) {
+    #socialIcons {
+      top: 70%; /* 横長表示では上から60%の位置に */
+    }
+  }
+  
+  @media (orientation: landscape) {
+    #socialIcons img {
+      width: 50px; /* 横長表示では幅を50pxにする */
+      margin-bottom: 20px; /* 横長表示では間隔を20pxにする */
+    }
+  }
+
+   /* メディアクエリ */
+   @media (orientation: portrait) {
+    #content {
+      top: 50%; /* 縦長表示では上から40%の位置に */
+    }
+  }

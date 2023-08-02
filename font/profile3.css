@@ -250,7 +250,7 @@ body {
     gap: 10px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
     body {
     overflow-x: hidden;
     display: flex;
@@ -261,7 +261,7 @@ body {
 }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
 .container {
     margin-top: 120vh;
     padding-left: 100em;
@@ -270,7 +270,7 @@ body {
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
     .new-image-container {
         width: 100%;  # Adjusted width for mobile view
     }

@@ -1,277 +1,222 @@
 @font-face {
-            font-family: "ニコモジ＋v2";
-            src: url("font/nicomoji-plus_v2.ttf") format("truetype");
-        }
-        body {
-    overflow-x: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: "ニコモジ＋v2", sans-serif;
-        }
-
-        #bg-video {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -100;
-            transform: translate(-50%, -50%);
-        }
-
-        
-
-        .image-container {
-            position: relative;
-            width: 250px;
-            height: 340px; 
-            border-radius: 0;
-            transition: border-radius 3s ease, transform 1s ease;
-            overflow: hidden;
-            transform: translateX(-200%);
-        }
-
-        .image-container:hover {
-            border-radius: 20% 0 20% 0;
-        }
-
-        .image-effect {
-            position: absolute;
-            width: 100%;
-            height: 100%; 
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .image-container:hover .image-effect {
-            transform: scale(1.05);
-        }
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 255, 0.05);
-            transition: background-color 0.7s ease;
-            opacity: 0;
-        }
-
-        .image-container:hover .overlay {
-            opacity: 1;
-            background-color: rgba(0, 0, 255, 0.17);
-        }
-
-        .new-image-container1 {
-        }
-
-        .new-image-container2 {
-        }
-
-        .new-image-container3 {
-        }
-
-        .new-image-container4 {
-        }
-
-        .new-image-container5 {
-        }
-
-        /* Additional members */
-        .new-image-container6 {
-        }
-
-        .new-image-container7 {
-        }
-
-        .new-image-container8 {
-        }
-
-        .new-image-container9 {
-        }
-
-        .new-image-container10 {
-        }
-
-        .new-image-container11 {
-        }
-
-        /* More additional members */
-        .new-image-container12 {
-        }
-
-        .new-image-container13 {
-        }
-
-        .new-image-container14 {
-        }
-
-        .new-image-container15 {
-        }
-
-        /* More additional members */
-        .new-image-container16 {
-        }
-
-        .new-image-container17 {
-        }
-
-        .new-image-container18 {
-        }
-
-        .new-image-container19 {
-        }
-
-        .new-image-container20 {
-        }
-
-        .new-image-container21 {
-        }
-
-        .new-image-container22 {
-        }
-
-        .new-image-container23 {
-        }
-
-        .profile-text {
-            position: absolute;
-            top: -150px;
-            left: -700px;
-            width: 100%;
-            text-align: center;
-            color: white;
-            font-size: 30px;
-            font-weight: bold;
-        }
-
-        .text-container {
-            position: absolute;
-            width: 100%;
-            bottom: 0px; 
-            text-align: center;
-            color: white;
-            font-size: 27px;
-            line-height: 1.3;
-            padding: 10px;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .text-container .text-jp {
-            font-weight: bold;
-        }
-
-        .text-container .text-en {
-            font-weight: normal;
-        }
-    
-@font-face {
-    font-family: "ニコモジ＋v2";
-    src: url("font/nicomoji-plus_v2.ttf") format("truetype");
+  font-family: "ニコモジ＋v2";
+  src: url("font/nicomoji-plus_v2.ttf") format("truetype");
 }
+
 body {
-    overflow-x: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: "ニコモジ＋v2", sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll; /* 縦方向のスクロールを有効にする */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0vh;
+  margin: 0;
+  font-family: "ニコモジ＋v2", sans-serif;
 }
 
 #bg-video {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    transform: translate(-50%, -50%);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translate(-50%, -50%);
+}
+
+#titleImage {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 220px;
+  height: auto;
+  z-index: 2;
+}
+
+#navigationMenu {
+  position: fixed;
+  top: 10px;
+  right: 6px;
+  z-index: 3;
+}
+
+#navigationMenu li {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+#navigationMenu li a {
+  display: block;
+  position: absolute;
+  top: 41%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  transition: text-shadow 0.3s ease;
+}
+
+#navigationMenu li:hover a {
+  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+}
+
+#navigationMenu li img {
+  position: relative;
+  z-index: 3;
+  width: 250px;
+  height: auto;
+}
+
+#newsTicker {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  width: 40%;
+  height: 60px;
+  overflow: hidden;
+  border: 2px solid #00ff00;
+  border-radius: 10px;
+  background-color: #000000;
+  box-shadow: 0 0 10px #00ff00;
+}
+
+#newsTicker .tickerText {
+  position: relative;
+  top: 18%;
+  white-space: nowrap;
+  animation: tickerAnimation 20s linear infinite;
+  text-align: center;
+}
+
+#newsTicker .tickerText span {
+  padding: 5px;
+  display: inline-block;
+  color: white;
+  font-size: 28px;
+}
+
+@keyframes tickerAnimation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-250%);
+  }
+}
+
+#socialIcons {
+  position: fixed;
+  top: 220px; /* 任意のピクセル値に変更 */
+  left: 60px;
+  z-index: 7;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 
+#socialIcons img {
+  width: 50px;
+  height: auto;
+  margin-bottom: 50px;
+  margin-right: 5px;
+}
 
-/* 既存のスタイルがここに入る部分 */
+#socialIcons img:hover {
+  animation: electricFlow 0.8s linear infinite;
+}
 
-/* 画像コンテナの初期スタイル */
-.image-container {
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 600px;
+  margin-top: 2100px;
+  animation: fadeIn 2s ease-in;
+}
+
+.img {
+  background-color: rgb(255, 103, 222);
+  box-shadow: 0 0 20px 5px rgba(255, 103, 222, 0.8); /* 発光効果 */
+  margin: 5px;
+  padding: 5px;
+  margin-bottom: 60px; /* 下側の間隔を20pxに設定 */
+  position: relative;
+  transition: transform 0.5s ease, background-color 0.5s ease, opacity 1.8s ease; /* ここで時間を設定 */
+  /* その他のスタイル */
+  opacity: 0; /* 初期状態では透明 */
+}
+
+.img.visible {
+  opacity: 1; /* visibleクラスが付与されたら不透明に */
+}
+
+.img img {
+  width: 140px;
+  height: 140px;
+  border-radius: 0;
+  transition: border-radius 0.7s ease;
+}
+
+.img .name-text {
+  display: block;
+  position: absolute;
+  bottom: 3;
+  left: 0;
+  width: 94%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.img:hover img {
+  border-radius: 50%;
+  background-color: lightblue;
+}
+
+.img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 128, 255, 0); /* 初期状態で透明 */
+  transition: background-color 0.5s ease;
+}
+
+.img:hover::before {
+  background-color: rgba(0, 128, 255, 0.2); /* ホバー時に薄い青 */
+}
+
+.img:hover {
+  transform: scale(1.15);
+}
+
+/* Animations */
+@keyframes tickerAnimation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-250%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
     opacity: 0;
-}
-
-/* 画像コンテナのフェードインアニメーション */
-.image-container.fade-in {
+  }
+  to {
     opacity: 1;
-    transition: opacity 1.4s ease;
-}
-
-
-body, html {
-    height: 100%;  # This line sets the height of the page to 100%
-    margin: 0;  # This line removes the default margin
-    display: flex;  # This line sets the display to flex for center alignment
-    align-items: center;  # This line centers the content vertically
-    justify-content: center;  # This line centers the content horizontally
-}
-
-body {
-    overflow-x: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    height: 100vh;
-}
-
-body {
-    overflow-x: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    height: 100vh;
-}
-
-.container {
-    margin-top: 120vh;
-    padding-left: 70em;
-    margin-top: 200vh;
-    padding-left: 60em;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    gap: 10px;
-}
-
-@media (max-width: 1200px) {
-    body {
-    overflow-x: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    height: 100vh;
-}
-}
-
-@media (max-width: 1200px) {
-.container {
-    margin-top: 120vh;
-    padding-left: 100em;
-        grid-template-columns: repeat(3, 1fr);
-        
-    }
-}
-
-@media (max-width: 1200px) {
-    .new-image-container {
-        width: 100%;  # Adjusted width for mobile view
-    }
+  }
 }

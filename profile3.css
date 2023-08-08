@@ -43,7 +43,7 @@ body {
 }
 
 #navigationMenu li {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   position: relative;
 }
 
@@ -68,7 +68,7 @@ body {
   position: relative;
   z-index: 3;
   width: 250px;
-  height: auto;
+  height: 10;
 }
 
 #newsTicker {
@@ -138,7 +138,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   width: 600px;
-  margin-top: 2100px;
+  margin-top: 2400px;
   animation: fadeIn 2s ease-in;
 }
 
@@ -159,8 +159,8 @@ body {
 }
 
 .img img {
-  width: 140px;
-  height: 140px;
+  width: 160px;
+  height: 160px;
   border-radius: 0;
   transition: border-radius 0.7s ease;
 }
@@ -219,4 +219,61 @@ body {
   to {
     opacity: 1;
   }
+}
+
+
+@media (max-width: 600px) {
+  .img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 601px) {
+  .img {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.twitter-logo-link {
+    display: inline-block;
+    background-color: transparent;
+    width: 64px;
+    height: 64px;
+    position: relative; /* To allow absolute positioning of the X image */
+    transition: background-color 0.3s; 
+    top: -20px;
+}
+
+.twitter-logo, .twitter-logo-x {
+    display: block;
+    width: 64px;
+    height: 64px;
+    transition: opacity 0.9s;
+}
+
+.twitter-logo-x {
+    background-image: url('Homeimg/X.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 0; /* Hiding the X image initially */
+    position: absolute; /* Absolute positioning within the .twitter-logo-link */
+    top: -5px; /* Moving the X image slightly up */
+    left: -5px; /* Moving the X image slightly left */
+    filter: brightness(0) invert(1); /* Making the X image blue */
+    z-index: 1; /* Ensuring the X image is on top */
+}
+
+.twitter-logo-link:hover .twitter-logo {
+    opacity: 0;
+}
+
+.twitter-logo-link:hover .twitter-logo-x {
+    opacity: 1; /* Displaying the X image on hover */
+}
+
+.twitter-logo-x:hover {
+    filter: brightness(0) invert(1) drop-shadow(0 0 20px blue);
 }

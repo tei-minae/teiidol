@@ -1,3 +1,17 @@
+
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -100;
+    object-fit: cover;
+    object-position: center;
+    width: 100vw;
+    height: 100vh;
+}
+/* Remaining selectors will be placed here without touching the .container selector */
 body {
     color: #58a6ff;
     font-family: 'Courier New', Courier, monospace;
@@ -6,42 +20,29 @@ body {
     margin: 0;
     overflow: hidden;
 }
-
-.bg-video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-}
-
+    
+    
+    
 .container {
-    width: 700px;
+    width: 400px;
     margin: 0 auto;
     padding: 20px;
     background-color: rgba(22, 27, 34, 0.8);
 }
-
 h1 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 2em;
 }
-
 #contact-form {
     padding: 20px;
     border: 2px solid #58a6ff;
     border-radius: 5px;
 }
-
 #contact-form label {
     display: block;
     margin-top: 30px;
 }
-
 #contact-form input, #contact-form select, #contact-form textarea {
     width: 100%;
     padding: 10px;
@@ -51,7 +52,6 @@ h1 {
     color: #58a6ff;
     font-size: 1em;
 }
-
 #contact-form input[type="submit"] {
     margin-top: 10px;
     background-color: #58a6ff;
@@ -59,9 +59,130 @@ h1 {
     cursor: pointer;
     font-size: 1em;
 }
-
 #contact-form input[type="submit"]:hover {
     background-color: #0d1117;
     color: #58a6ff;
     border: 1px solid #58a6ff;
+}
+#titleImage {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 220px;
+    height: auto;
+    z-index: 2;
+  }
+  #navigationMenu {
+    position: fixed;
+    top: 10px;
+    right: 6px;
+    z-index: 3;
+  }
+  #navigationMenu li {
+    margin-bottom: 5px;
+    position: relative;
+  }
+  #navigationMenu li a {
+    display: block;
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: text-shadow 0.3s ease;
+  }
+  #navigationMenu li:hover a {
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+  }
+  #navigationMenu li img {
+    position: relative;
+    z-index: 3;
+    width: 250px;
+    height: 10;
+  }
+  #socialIcons {
+    position: fixed;
+    top: 220px; /* 任意のピクセル値に変更 */
+    left: 60px;
+    z-index: 7;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #socialIcons img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 50px;
+    margin-right: 5px;
+  }
+  #socialIcons img:hover {
+    animation: electricFlow 0.8s linear infinite;
+  }
+  /* Animations */
+@keyframes tickerAnimation {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-250%);
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @media (max-width: 600px) {
+    .img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  @media (min-width: 601px) {
+    .img {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+  .twitter-logo-link {
+    display: inline-block;
+    background-color: transparent;
+    width: 64px;
+    height: 64px;
+    position: relative; /* To allow absolute positioning of the X image */
+    transition: background-color 0.3s; 
+    top: -20px;
+}
+.twitter-logo, .twitter-logo-x {
+    display: block;
+    width: 64px;
+    height: 64px;
+    transition: opacity 0.9s;
+}
+.twitter-logo-x {
+    background-image: url('Homeimg/X.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 0; /* Hiding the X image initially */
+    position: absolute; /* Absolute positioning within the .twitter-logo-link */
+    top: -5px; /* Moving the X image slightly up */
+    left: -5px; /* Moving the X image slightly left */
+    filter: brightness(0) invert(1); /* Making the X image blue */
+    z-index: 1; /* Ensuring the X image is on top */
+}
+.twitter-logo-link:hover .twitter-logo {
+    opacity: 0;
+}
+.twitter-logo-link:hover .twitter-logo-x {
+    opacity: 1; /* Displaying the X image on hover */
+}
+.twitter-logo-x:hover {
+    filter: brightness(0) invert(1) drop-shadow(0 0 20px blue);
 }

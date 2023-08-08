@@ -1,0 +1,216 @@
+@font-face {
+    font-family: "ニコモジ＋v2";
+    src: url("font/nicomoji-plus_v2.ttf") format("truetype");
+  }
+  
+  body {
+    overflow-x: hidden;
+    overflow-y: scroll; /* 縦方向のスクロールを有効にする */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0vh;
+    margin: 0;
+    font-family: "ニコモジ＋v2", sans-serif;
+  }
+
+  #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    background-color: black;
+  }
+
+  #topVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+  }
+
+  #titleImage {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 220px;
+    height: auto;
+    z-index: 2;
+  }
+  
+  #navigationMenu {
+    position: fixed;
+    top: 10px;
+    right: 6px;
+    z-index: 3;
+  }
+  
+  #navigationMenu li {
+    margin-bottom: 5px;
+    position: relative;
+  }
+  
+  #navigationMenu li a {
+    display: block;
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: text-shadow 0.3s ease;
+  }
+  
+  #navigationMenu li:hover a {
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+  }
+  
+  #navigationMenu li img {
+    position: relative;
+    z-index: 3;
+    width: 250px;
+    height: 10;
+  }
+  
+  #newsTicker {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    width: 40%;
+    height: 60px;
+    overflow: hidden;
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    background-color: #000000;
+    box-shadow: 0 0 10px #00ff00;
+  }
+  
+  #newsTicker .tickerText {
+    position: relative;
+    top: 18%;
+    white-space: nowrap;
+    animation: tickerAnimation 20s linear infinite;
+    text-align: center;
+  }
+  
+  #newsTicker .tickerText span {
+    padding: 5px;
+    display: inline-block;
+    color: white;
+    font-size: 28px;
+  }
+  
+  @keyframes tickerAnimation {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-250%);
+    }
+  }
+  
+  #socialIcons {
+    position: fixed;
+    top: 220px; /* 任意のピクセル値に変更 */
+    left: 60px;
+    z-index: 7;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  
+  #socialIcons img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 50px;
+    margin-right: 5px;
+  }
+  
+  #socialIcons img:hover {
+    animation: electricFlow 0.8s linear infinite;
+  }
+  
+  /* Animations */
+@keyframes tickerAnimation {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-250%);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
+  @media (max-width: 600px) {
+    .img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  @media (min-width: 601px) {
+    .img {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+  
+  .twitter-logo-link {
+    display: inline-block;
+    background-color: transparent;
+    width: 64px;
+    height: 64px;
+    position: relative; /* To allow absolute positioning of the X image */
+    transition: background-color 0.3s; 
+    top: -20px;
+}
+
+.twitter-logo, .twitter-logo-x {
+    display: block;
+    width: 64px;
+    height: 64px;
+    transition: opacity 0.9s;
+}
+
+.twitter-logo-x {
+    background-image: url('Homeimg/X.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 0; /* Hiding the X image initially */
+    position: absolute; /* Absolute positioning within the .twitter-logo-link */
+    top: -5px; /* Moving the X image slightly up */
+    left: -5px; /* Moving the X image slightly left */
+    filter: brightness(0) invert(1); /* Making the X image blue */
+    z-index: 1; /* Ensuring the X image is on top */
+}
+
+.twitter-logo-link:hover .twitter-logo {
+    opacity: 0;
+}
+
+.twitter-logo-link:hover .twitter-logo-x {
+    opacity: 1; /* Displaying the X image on hover */
+}
+
+.twitter-logo-x:hover {
+    filter: brightness(0) invert(1) drop-shadow(0 0 20px blue);
+}

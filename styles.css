@@ -11,22 +11,22 @@ body {
           margin: 0;
           font-family: "ニコモジ＋v2", sans-serif;
       }
-#background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
-  background-color: black;
-}
-
+      #background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 0;
+        background-image: url("Homeimg/2511049.jpg");
+      }
 #topVideo {
   position: fixed;
   top: 0;
-  left: 30;
-  width: 130vw;
-  height: 130vh;
+  left: 10;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
   z-index: 1;
 }
 
